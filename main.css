@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 5px;
+    padding: 5px;
+    background-color: mintcream;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    padding: 20px;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 20px;
+    border: 2px solid black;
+    border-radius: 15%;
+    background-color: oldlace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    flex: 2;
+    text-align: center;
+}
+
+.header h1, .header p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructions {
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.main {
+    flex:4;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+.footer {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.cheese {
+    width: 250px;
+    border-radius: 50%;
+    padding: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.form {
+    max-width: 800px;
+    margin: auto;
+}
+
+.form legend {
+    margin-bottom: 20px;
+}
+
+.form h1, .correct-feedback, .incorrect-feedback {
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+.form p {
+    text-align: left;
+}
+
+.form div {
+    margin-left: 50px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.correct-feedback h1 {
+    color: forestgreen;
+}
+
+.incorrect-feedback h1 {
+    color: red;
+}
