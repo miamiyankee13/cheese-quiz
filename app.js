@@ -17,7 +17,7 @@ const CONTENT = [
         answer: 'American'
     },
     {
-        question: 'Originated in Italy. A pale yellow colored cheese made from cow\'s milk. Typically grated or shredded. Flavor(s) - savory, sharp, fuity, nutty.',
+        question: 'Originated in Italy. A pale yellow colored cheese made from cow\'s milk. Typically grated or shredded. Flavor(s) - savory, sharp, fruity, nutty.',
         choices: ['Ricotta', 'Parmesan', 'Mozzarella', 'Pecorino Romano'],
         answer: 'Parmesan'
     },
