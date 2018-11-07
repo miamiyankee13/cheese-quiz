@@ -74,15 +74,7 @@ $('.js-submit-btn').on('click', function(event) {
 //return the question HTML
 function createQuestion() {
 
-const choicesHTML = CONTENT[currentQuestion].choices.reduce((accumulator, choice, index) => {
-  accumulator += `
-        <div>
-            <input required type="radio" id="choice${index}" name="choice" value="${choice}">
-            <label for="choice${index}">${choice}</label>
-        </div>`;
-        return accumulator
-}, '')
-
+const choicesHTML = CONTENT[currentQuestion].choices.map((choice, index) => renderChoices(choice, index)).join('');
   return ` 
     <form class="form">
     <fieldset>
@@ -94,6 +86,14 @@ const choicesHTML = CONTENT[currentQuestion].choices.reduce((accumulator, choice
         <button type="submit" name="submit" class="answer js-answer-btn">Submit Answer</button>
         </fieldset>
 </form>`;
+}
+
+function renderChoices(choice, index) {
+    return `
+    <div>
+        <input required type="radio" id="choice${index}" name="choice" value="${choice}">
+        <label for="choice${index}">${choice}</label>
+    </div>`;
 }
 
 //return the score html
@@ -182,11 +182,8 @@ $('body').on('click', '.js-reset-btn', function(event) {
 //activates all other functions
 function handleCheeseQuiz() {
 handleStartQuiz();
-createQuestion();
-displayScore();
 evaluateAnswer();
 nextQuestion();
-displayFinalResults();
 resetQuiz();
 }
 
